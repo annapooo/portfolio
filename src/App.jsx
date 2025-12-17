@@ -1,3 +1,5 @@
+import ProjectCard from "./projectCard";
+
 export default function App() {
   return (
    <main
@@ -42,88 +44,65 @@ export default function App() {
     <section style={{ marginTop: "4rem" }}>
       <h2 style={{ fontSize: "1.75rem", marginBottom: "2rem" }}>Projects</h2>
       <h3 style={{ fontSize: "1.1rem", fontWeight: "500",color: "var(--purple-accent)",marginBottom: "2rem"}}> Industry Projects </h3>
-      <div
-  style={{
-    padding: "1.5rem",
-    border: "1px solid #E3DEF2",
-    borderRadius: "8px",
-    marginBottom: "2rem"
-  }}
->
-  <h4 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-    Document Signing System
-  </h4>
+     <ProjectCard
+  title="Document Signing System"
+  subtitle="Full-stack Prototype · Industry Project"
+  bullets={[
+    "Designed and implemented an end-to-end document signing workflow",
+    "Built frontend interfaces and backend APIs for document lifecycle management",
+    "Re-architected the data layer from SQL to MongoDB based on scalability requirements",
+    "Delivered a working prototype that served as the foundation for further development"
+  ]}
+  tech="React, Node.js, Express, MongoDB, SQL"
+/>
 
-  <p style={{ fontSize: "0.95rem", marginBottom: "0.75rem" }}>
-    Full-stack Prototype · Industry Project
-  </p>
+<ProjectCard
+  title="Lead Management System"
+  subtitle="Backend Developer · Industry Project"
+  bullets={[
+    "Implemented missing core backend workflows for lead and task management",
+    "Fixed broken logic and improved workflow consistency",
+    "Modified and redesigned database schemas to address missing or incorrect data models",
+    "Made targeted frontend fixes in the React codebase to resolve UI state issues (light/dark mode)"
+  ]}
+  tech="Node.js, Express, MongoDB, React (minor fixes)"
+/>
+   <ProjectCard
+  title="VPN Network Setup"
+  subtitle="DevOps / Systems · Industry Task"
+  bullets={[
+    "Set up and configured a VPN on a cloud-hosted server",
+    "Worked with tunneling and routing configurations",
+    "Debugged connectivity issues related to network routing"
+  ]}
+  tech="Linux, SSH, VPS, VPN, WireGuard"
+/>
 
-  <ul style={{ paddingLeft: "1.2rem", marginBottom: "0.75rem" }}>
-    <li>Designed and implemented an end-to-end document signing workflow</li>
-    <li>Built frontend interfaces and backend APIs for document lifecycle management</li>
-    <li>Re-architected the data layer from SQL to MongoDB based on scalability requirements</li>
-    <li>Delivered a working prototype that served as the foundation for further development</li>
-  </ul>
+<h3 style={{fontSize: "1.1rem",fontWeight: "500",color: "var(--purple-accent)",marginBottom: "2rem",marginTop: "3rem"}}>Personal Projects</h3>
+<ProjectCard
+  title="Meeting Minutes (MOM) Generator"
+  subtitle="AI/ML · Personal Project"
+  bullets={[
+    "Built an automated pipeline to generate structured Minutes of Meeting from audio recordings",
+    "Used Whisper for speech-to-text transcription",
+    "Designed a custom summarization approach using NLTK, regex-based filtering, and pattern matching",
+    "Focused on extracting actionable and readable summaries rather than generic text condensation"
+  ]}
+  tech="React,Python, Whisper, NLTK, Regex"
+/>
 
-  <p style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-    Tech: React, Node.js, Express, MongoDB, SQL
-  </p>
-</div>
- <div
-  style={{
-    padding: "1.5rem",
-    border: "1px solid #E3DEF2",
-    borderRadius: "8px",
-    marginBottom: "2rem"
-  }}
->
-  <h4 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-    Lead Management System
-  </h4>
-
-  <p style={{ fontSize: "0.95rem", marginBottom: "0.75rem" }}>
-    Backend Developer · Industry Project
-  </p>
-
-  <ul style={{ paddingLeft: "1.2rem", marginBottom: "0.75rem" }}>
-    <li>Implemented missing core backend workflows for lead and task management</li>
-    <li>Fixed broken logic and improved workflow consistency</li>
-    <li>Modified and redesigned database schemas to address missing or incorrect data models</li>
-    <li>Extended backend structure to support future integrations with external lead sources</li>
-  </ul>
-
-  <p style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-    Tech: React, Node.js, Express, MongoDB
-  </p>
-  </div>
-   <div
-  style={{
-    padding: "1.5rem",
-    border: "1px solid #E3DEF2",
-    borderRadius: "8px",
-    marginBottom: "2rem"
-  }}
->
-  <h4 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-    VPN Network Setup
-  </h4>
-
-  <p style={{ fontSize: "0.95rem", marginBottom: "0.75rem" }}>
-    DevOps / Systems · Industry Task
-  </p>
-
-  <ul style={{ paddingLeft: "1.2rem", marginBottom: "0.75rem" }}>
-    <li>Set up and configured a VPN on a cloud-hosted server</li>
-    <li>Worked with tunneling and routing configurations</li>
-    <li>Debugged connectivity issues related to network routing</li>
-  </ul>
-
-  <p style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-    Tech: Linux, SSH, VPS, VPN, WireGuard
-  </p>
-</div>
-
-    </section>
+<ProjectCard
+  title="Rain Prediction & Alert System"
+  subtitle="AI/ML · Personal Project"
+  bullets={[
+    "Built a data-driven alerting system to estimate rain likelihood using historical and real-time weather data",
+    "Implemented an SVM-based classifier as part of the decision pipeline",
+    "Integrated Twilio to send SMS reminders when rain probability exceeded defined thresholds",
+    "Focused on end-to-end workflow design rather than model performance optimization"
+  ]}
+  tech="Python, scikit-learn (SVM), Weather API, Twilio, Tkinter"
+/>
+  </section>
   </div>
     </main>
   );
