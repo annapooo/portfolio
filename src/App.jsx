@@ -9,9 +9,30 @@ export default function App() {
     display: "flex",
     justifyContent: "center"
   }}
->     <div style={{ maxWidth: "900px", width: "100%" }}>
+>    
+ <div style={{ maxWidth: "900px", width: "100%" }}>
+    <nav
+    style={{
+      width: "100%",
+      maxWidth: "900px",
+      marginBottom: "3rem",
+      display: "flex",
+      gap: "2rem",
+      fontSize: "0.95rem"
+    }}
+  >
+    <a href="#home" style={{ textDecoration: "none", color: "var(--text-main)" }}>
+      Home
+    </a>
+    <a href="#projects" style={{ textDecoration: "none", color: "var(--text-main)" }}>
+      Projects
+    </a>
+    <a href="#skills" style={{ textDecoration: "none", color: "var(--text-main)" }}>
+      Skills
+    </a>
+  </nav>
      {/* Home Section */}
-      <section style={{ maxWidth: "800px", width: "100%" }}>
+      <section id="home" style={{ maxWidth: "800px", width: "100%" }}>
         <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>
           Annapoorani Lakshmanan
         </h1>
@@ -35,13 +56,13 @@ export default function App() {
 
         <div style={{ display: "flex", gap: "1.5rem" }}>
           <a href="https://github.com/annapooo" target="_blank" rel="noreferrer" style={{textDecoration:"none", color:"var(--purple-accent)"}}>GitHub</a>
-          <a href="https://www.linkedin.com/in/annapoorani-lakshmanan-a60655335/" target="_blank" rel="" style={{textDecoration:"none", color:"var(--purple-accent)"}}>LinkedIn</a>
+          <a href="https://www.linkedin.com/in/annapoorani-lakshmanan-a60655335/" target="_blank" rel="noreferrer" style={{textDecoration:"none", color:"var(--purple-accent)"}}>LinkedIn</a>
           <a href="mailto:anprnilax0414@gmail.com" style={{textDecoration:"none", color:"var(--purple-accent)"}}>Email</a>
         </div>
         <hr style={{marginTop: "3rem",border: "none",borderTop: "1px solid #E3DEF2"}}/>
       </section>
       {/* Projects Section */}
-    <section style={{ marginTop: "4rem" }}>
+    <section id="projects" style={{ marginTop: "4rem" }}>
       <h2 style={{ fontSize: "1.75rem", marginBottom: "2rem" }}>Projects</h2>
       <h3 style={{ fontSize: "1.1rem", fontWeight: "500",color: "var(--purple-accent)",marginBottom: "2rem"}}> Industry Projects </h3>
      <ProjectCard
@@ -88,7 +109,7 @@ export default function App() {
     "Designed a custom summarization approach using NLTK, regex-based filtering, and pattern matching",
     "Focused on extracting actionable and readable summaries rather than generic text condensation"
   ]}
-  tech="React,Python, Whisper, NLTK, Regex"
+  tech="React, Python, Whisper, NLTK, Regex"
 />
 
 <ProjectCard
@@ -100,10 +121,56 @@ export default function App() {
     "Integrated Twilio to send SMS reminders when rain probability exceeded defined thresholds",
     "Focused on end-to-end workflow design rather than model performance optimization"
   ]}
-  tech="Python, scikit-learn (SVM), Weather API, Twilio, Tkinter"
+  tech="Python, scikit-learn, Weather API, Twilio, Tkinter"
 />
+  {/* Skills Section */}
   </section>
+  <section id="skills" style={{ marginTop: "4rem" }}>
+  <h2 style={{ fontSize: "1.75rem", marginBottom: "2rem" }}>Skills</h2>
+  <div style={{ display: "grid", gap: "2rem" }}>
+  <div>
+    <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem" }}>Languages</h3>
+    <p>Python, JavaScript, SQL</p>
   </div>
-    </main>
+
+  <div>
+    <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem" }}>
+      Machine Learning & Data
+    </h3>
+    <p>
+      scikit-learn, NLP, data preprocessing & feature engineering
+    </p>
+  </div>
+
+  <div>
+    <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem" }}>
+      Backend & Systems
+    </h3>
+    <p>
+      Node.js, Express.js, REST APIs, backend workflow logic, MongoDB, SQL databases
+    </p>
+  </div>
+
+  <div>
+    <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem" }}>
+      DevOps & Infrastructure
+    </h3>
+    <p>
+      Linux, SSH, VPS setup, VPN & tunneling basics
+    </p>
+  </div>
+
+  <div>
+    <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem" }}>
+      Tools & Integrations
+    </h3>
+    <p>
+      Git & GitHub, Postman, VS Code, Twilio API, external APIs, Whisper
+    </p>
+  </div>
+</div>
+</section>
+  </div>
+  </main>
   );
 }
